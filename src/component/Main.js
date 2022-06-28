@@ -56,10 +56,31 @@ export default function Main() {
    
   return (
     <div>
+      <div>
+
         <button onClick={()=>dispatch(addToCart(data))}>Add Item</button>
         <button onClick={()=>dispatch(removeItem(data))}>Remove Item</button>
         <button onClick={()=>dispatch(getProduct())}>Get Product</button>
         {/* <button onClick={}>Get Branded products</button> */}
+      </div>
+      <div className='product-container'>
+        {
+          state.map((item,index)=>{
+            return(
+            <div key={item.id} className='product-item' >
+            <img src={item.image} alt='product' className='product-image' />
+            <h1 className='titleProduct'>{item.title}</h1>
+            <h1 className='titleProduct'>$ {item.price}</h1>
+            <h4 className='categoryProduct'>{item.category}</h4>
+            <p className='categoryProduct'>{item.description}</p>
+            <div>
+              <button>Add to cart</button>
+              <button>Remove product</button>
+            </div>
+          </div>)
+          })
+        }   
+      </div>
     </div>
   )
 }

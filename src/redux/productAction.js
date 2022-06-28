@@ -16,11 +16,11 @@ export const getProduct=()=>{
     }
 }
 
-export const updateProduct=(data)=>{
-    console.log('Action Called', data);
-    return {
-        type:'UPDATE_ITEM',
-        payload: data
-    }
-}
+// export const updateProduct=(data)=>{
+//     console.log('Action Called', data);
+//     return {
+//         type:'UPDATE_ITEM',
+//         payload: data
+//     }
+// }
 
